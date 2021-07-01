@@ -1,0 +1,8 @@
+package programmers.level1.convertStringToInteger;
+
+class Solution {
+    public int solution(String s){
+        int answer = Integer.parseInt(s);
+        return answer;
+    }
+}
