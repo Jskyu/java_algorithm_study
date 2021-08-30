@@ -4,6 +4,7 @@ out/
 
 ### IntelliJ IDEA ###
 .idea
+.metadata
 *.iws
 *.iml
 *.ipr
