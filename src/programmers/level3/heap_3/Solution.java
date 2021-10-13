@@ -24,8 +24,8 @@ class Solution {
                         } else if (num == -1) {
                             removeMin(maxQ);
                         }
-                        break;
                     }
+                    break;
             }
         });
 
