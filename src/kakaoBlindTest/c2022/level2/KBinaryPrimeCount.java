@@ -89,4 +89,24 @@ public class KBinaryPrimeCount {
         return result.toString();
     }
 
+    public static int solution2(int n, int k) {
+
+        int ans = 0;
+        String[] temp = Integer.toString(n, k).split("0");
+
+        Loop:
+        for (String t : temp) {
+            System.out.println("t = " + t);
+            if (t.length() == 0) continue;
+            long a = Long.parseLong(t);
+            if (a == 1) continue;
+            for (int i = 2; i <= Math.sqrt(a); i++)
+                if (a % i == 0) continue Loop;
+
+            ans++;
+        }
+
+        return ans;
+    }
+
 }
