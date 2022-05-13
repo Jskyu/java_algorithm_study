@@ -5,9 +5,14 @@ public class Solution {
     int[] NUMBERS = new int[0];
 
     public int solution(int[] numbers, int target) {
-        TARGET = target;
-        NUMBERS = numbers;
-        return getTargetCount(0, 0);
+        long start = System.currentTimeMillis();
+        try {
+            TARGET = target;
+            NUMBERS = numbers;
+            return getTargetCount(0, 0);
+        } finally {
+            System.out.println("time : " + (System.currentTimeMillis() - start) + "ms");
+        }
     }
 
     private int getTargetCount(int number, int index) {
