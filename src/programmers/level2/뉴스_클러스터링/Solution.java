@@ -7,19 +7,19 @@ class Solution {
     public int solution(String str1, String str2) {
         long start = System.currentTimeMillis();
         try {
-            str1 = str1.toLowerCase().replaceAll("[^a-z]", "~");
-            str2 = str2.toLowerCase().replaceAll("[^a-z]", "~");
+            str1 = str1.toLowerCase();
+            str2 = str2.toLowerCase();
 
             List<String> list1 = new ArrayList<>();
             List<String> list2 = new ArrayList<>();
 
             for (int i = 0; i < str1.length() - 1; i++) {
                 String str = str1.substring(i, i + 2);
-                if (!str.contains("~")) list1.add(str);
+                if (str.matches("[a-z]+")) list1.add(str);
             }
             for (int i = 0; i < str2.length() - 1; i++) {
                 String str = str2.substring(i, i + 2);
-                if (!str.contains("~")) list2.add(str);
+                if (str.matches("[a-z]+")) list2.add(str);
             }
 
             //교집합
