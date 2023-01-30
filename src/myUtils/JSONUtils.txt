@@ -1,0 +1,74 @@
+package ;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+@description 이 클래스는 json-simple 라이브러리를 바탕으로 편히 사용하기 위해 만든 클래스임.
+@see https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+
+--- Maven ---
+'''
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1.1</version>
+</dependency>
+'''
+
+--- Gradle ---
+'''
+implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+'''
+*/
+public class JsonUtils {
+
+    private static final JSONParser parser = new JSONParser();
+
+    public static JSONParser getParserInstance(){
+        return parser;
+    }
+
+    public static List<JSONObject> jsonStrToList(String jsonData) {
+        try {
+            return new ArrayList<>((JSONArray) getParserInstance().parse(jsonData));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static <K, V> Map<K, V> jsonObjectToMap(JSONObject obj) {
+        try {
+            return new HashMap<>(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static <K,V> JSONObject mapToJsonObj(Map<K, V> map) {
+        JSONObject obj = new JSONObject();
+
+        for (K key : map.keySet()) {
+            obj.put(key, map.get(key));
+        }
+
+        return obj;
+    }
+
+    public static <K,V> String mapToJsonStr(Map<K, V> map) {
+        JSONObject obj = mapToJsonObj(map);
+        return obj.toJSONString();
+    }
+
+    public static <T> JSONArray listToJsonArr(List<T> list) {
+        JSONArray array = new JSONArray();
+        array.addAll(list);
+        return array;
+    }
+}
