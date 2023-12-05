@@ -30,7 +30,7 @@ public class Main {
      */
     public static void quiz2(){
         //주어진 값
-        int n = 4;
+        int n = 6;
         int a = 5;
         int b = 3;
 
@@ -47,6 +47,9 @@ public class Main {
                 maxCnt = i;
                 minCnt = (n - temp) / min;
                 canMove = true;
+                break;
+            } else if(n % min == 0) {
+                minCnt = n / min;
                 break;
             }
         }
