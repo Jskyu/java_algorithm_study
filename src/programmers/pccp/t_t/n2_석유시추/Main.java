@@ -1,4 +1,4 @@
-package programmers.pccp.num2_석유시추;
+package programmers.pccp.t_t.n2_석유시추;
 
 /**<a href="https://school.programmers.co.kr/learn/courses/30/lessons/250136">[PCCP 기출문제] 2번 석유 시추</a>
  * 문제 설명

@@ -1,4 +1,4 @@
-package programmers.pccp.num4_수레움직이기;
+package programmers.pccp.t_t.n4_수레움직이기;
 
 import java.util.Arrays;
 

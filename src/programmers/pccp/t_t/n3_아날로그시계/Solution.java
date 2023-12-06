@@ -1,4 +1,4 @@
-package programmers.pccp.num3_아날로그시계;
+package programmers.pccp.t_t.n3_아날로그시계;
 
 class Solution {
     public int solution(int h1, int m1, int s1, int h2, int m2, int s2) {

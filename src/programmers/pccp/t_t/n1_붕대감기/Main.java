@@ -1,4 +1,4 @@
-package programmers.pccp.num1_붕대감기;
+package programmers.pccp.t_t.n1_붕대감기;
 
 /** <a href="https://school.programmers.co.kr/learn/courses/30/lessons/250137">붕대 감기</a>
  * 문제 설명

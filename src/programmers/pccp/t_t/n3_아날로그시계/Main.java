@@ -1,4 +1,4 @@
-package programmers.pccp.num3_아날로그시계;
+package programmers.pccp.t_t.n3_아날로그시계;
 
 /** <a href="https://school.programmers.co.kr/learn/courses/30/lessons/250135">아날로그 시계</a>
  * 문제 설명

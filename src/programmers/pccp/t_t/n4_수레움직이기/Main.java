@@ -1,4 +1,4 @@
-package programmers.pccp.num4_수레움직이기;
+package programmers.pccp.t_t.n4_수레움직이기;
 
 /** <a href="https://school.programmers.co.kr/learn/courses/30/lessons/250134">수레 움직이기</a>
  * 문제 설명

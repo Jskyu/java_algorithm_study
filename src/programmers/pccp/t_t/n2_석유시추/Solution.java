@@ -1,4 +1,4 @@
-package programmers.pccp.num2_석유시추;
+package programmers.pccp.t_t.n2_석유시추;
 
 import java.util.ArrayList;
 import java.util.List;

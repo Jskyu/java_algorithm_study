@@ -1,4 +1,4 @@
-package programmers.pccp.num1_붕대감기;
+package programmers.pccp.t_t.n1_붕대감기;
 
 class Solution {
     public int solution(int[] bandage, int health, int[][] attacks) {
