@@ -43,7 +43,7 @@ public class Main {
         };
         int[][] result = {
                 {4, 9},
-                {1, 0}
+                {0, 1}
         };
 
         for (int i = 0; i < result.length; i++) {
