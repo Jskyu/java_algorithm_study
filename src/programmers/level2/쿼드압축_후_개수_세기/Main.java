@@ -39,16 +39,29 @@ public class Main {
     public static void main(String[] args) {
         int[][][] arr = {
                 {{1, 1, 0, 0}, {1, 0, 0, 0}, {1, 0, 0, 1}, {1, 1, 1, 1}},
-                {{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}}
+                {{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}},
+                {{1,1,1,1,1,1,1,1},{0,1,1,1,1,1,1,1},{0,0,0,0,1,1,1,1},{0,1,0,0,1,1,1,1},{0,0,0,0,0,0,1,1},{0,0,0,0,0,0,0,1},{0,0,0,0,1,0,0,1},{0,0,0,0,1,1,1,1}}
         };
         int[][] result = {
                 {4, 9},
-                {0, 1}
+                {0, 1},
+                {10,15}
         };
 
         for (int i = 0; i < result.length; i++) {
+            long startTime = System.currentTimeMillis();
             int[] answer = new Solution().solution(arr[i]);
-            System.out.println("case " + (i + 1) + "\n정답: " + Arrays.toString(result[i]) + "\n풀이: " + Arrays.toString(answer) + "\n");
+            long answer1Time = System.currentTimeMillis() - startTime;
+
+            startTime = System.currentTimeMillis();
+            int[] answer2 = new SolutionByQuadTree().solution(arr[i]);
+            long answer2Time = System.currentTimeMillis() - startTime;
+
+            System.out.println("case " + (i + 1) +
+                    "\n정답: " + Arrays.toString(result[i]) +
+                    "\n풀이1: " + Arrays.toString(answer) + " (" + answer1Time + "ms)" +
+                    "\n풀이2: " + Arrays.toString(answer2) + " (" + answer2Time + "ms)" +
+                    "\n");
         }
     }
 }

@@ -2,6 +2,24 @@ package programmers.level2.쿼드압축_후_개수_세기;
 
 import java.util.*;
 
+/*
+테스트 1 〉	통과 (0.38ms, 73.3MB)
+테스트 2 〉	통과 (0.55ms, 79.1MB)
+테스트 3 〉	통과 (0.18ms, 85.1MB)
+테스트 4 〉	통과 (0.07ms, 76.1MB)
+테스트 5 〉	통과 (35.94ms, 92.4MB)
+테스트 6 〉	통과 (10.49ms, 88.6MB)
+테스트 7 〉	통과 (4.60ms, 102MB)
+테스트 8 〉	통과 (3.55ms, 88MB)
+테스트 9 〉	통과 (6.15ms, 85.2MB)
+테스트 10 〉	통과 (5.69ms, 130MB)
+테스트 11 〉	통과 (0.14ms, 77.6MB)
+테스트 12 〉	통과 (0.05ms, 71.4MB)
+테스트 13 〉	통과 (7.19ms, 97.3MB)
+테스트 14 〉	통과 (10.74ms, 122MB)
+테스트 15 〉	통과 (11.32ms, 121MB)
+테스트 16 〉	통과 (4.76ms, 99.5MB)
+ */
 class Solution {
     Map<Integer, Integer> map = new HashMap<>();
     public int[] solution(int[][] arr) {
