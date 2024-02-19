@@ -1,5 +1,7 @@
 package r2soft_test;
 
+import java.util.stream.IntStream;
+
 public class Main {
     public static void main(String[] args) {
         quiz1();
@@ -30,7 +32,7 @@ public class Main {
      */
     public static void quiz2(){
         //주어진 값
-        int n = 6;
+        int n = 3;
         int a = 5;
         int b = 3;
 
@@ -40,13 +42,19 @@ public class Main {
         int maxCnt = 0; // 큰 트럭이 운반한 횟수
         int minCnt = 0; // 작은 트럭이 운반한 횟수
 
-        for (int i = n / a; i > 0 ; i--) {
-            int temp = max * i; // 큰 무게 최대로 나누었을때
-            if ((n - temp) % min == 0) {
-                maxCnt = i;
-                minCnt = (n - temp) / min;
-                break;
-            } else if(n % min == 0) {
+        if (n >= a) {
+            for (int i = n / a; i > 0; i--) {
+                int temp = max * i; // 큰 무게 최대로 나누었을때
+                if ((n - temp) % min == 0) {
+                    maxCnt = i;
+                    minCnt = (n - temp) / min;
+                    break;
+                } else if (n % min == 0) {
+                    minCnt = n / min;
+                }
+            }
+        } else {
+            if (n % min == 0) {
                 minCnt = n / min;
             }
         }
