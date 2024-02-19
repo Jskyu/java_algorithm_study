@@ -39,26 +39,18 @@ public class Main {
 
         int maxCnt = 0; // 큰 트럭이 운반한 횟수
         int minCnt = 0; // 작은 트럭이 운반한 횟수
-        boolean canMove = false;
 
         for (int i = n / a; i > 0 ; i--) {
             int temp = max * i; // 큰 무게 최대로 나누었을때
             if ((n - temp) % min == 0) {
                 maxCnt = i;
                 minCnt = (n - temp) / min;
-                canMove = true;
                 break;
             } else if(n % min == 0) {
                 minCnt = n / min;
-                break;
             }
         }
 
-        if (canMove) {
-            System.out.println("큰 트럭 : " + maxCnt + "\n작은 트럭 : " + minCnt);
-        }
-        else {
-            System.out.println("옮길 수 없습니다.");
-        }
+        System.out.println("큰 트럭 : " + maxCnt + "\n작은 트럭 : " + minCnt);
     }
 }
